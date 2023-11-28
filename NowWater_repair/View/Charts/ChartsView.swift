@@ -33,10 +33,6 @@ struct ChartsReducer: Reducer {
         var top: TopBarReducer.State = .init()
         var ml: MLReducer.State = .init()
         var content: ChartsContentReducer.State = .init()
-        var adModel: GADNativeViewModel = .None
-        var isNoAD: Bool {
-            adModel == .None
-        }
         var isAllowImpression: Bool {
             if Date().timeIntervalSince(impresssDate) <= 10 {
                 debugPrint("[ad] charts native ad 间隔小于10秒 ")
@@ -227,9 +223,6 @@ struct ChartsView: View {
                 }
                 .background(RoundedRectangle(cornerRadius: 20).stroke()).padding(.horizontal, 16).padding(.top, 20)
                 Spacer()
-                HStack{
-                    NativeView(model: viewStore.adModel)
-                }.frame(height: viewStore.isNoAD ? 0 : 116).padding(.horizontal, 20).padding(.vertical, 15).padding(.bottom, 100)
             }.navigationTitle("Statistics").navigationBarRight {
                 Button {
                     viewStore.send(.historyButtonTapped)

@@ -17,9 +17,7 @@ struct NavigationReducer: Reducer {
     indirect enum Action: Equatable {
         case path(StackAction<Path.State, Path.Action>)
         case home(HomeReducer.Action)
-        
-        case loadAndShowAD(Action)
-        
+    
         case toGoalView
         case backDrinkView
 
@@ -33,7 +31,7 @@ struct NavigationReducer: Reducer {
                 case let .drink(drinkAction):
                     if drinkAction == DrinkReducer.Action.dailyButtonTapped {
                         return .run { send in
-                            await send(.loadAndShowAD(.toGoalView))
+                            await send(.toGoalView)
                         }
                     }
                     if drinkAction == DrinkReducer.Action.recordButtonTapped {
@@ -62,9 +60,6 @@ struct NavigationReducer: Reducer {
                     default:
                         break
                     }
-                    return .run { send in
-                        await send(.loadAndShowAD(.backDrinkView))
-                    }
                     
                 case let .element(id: id, action: .goal(_)):
                     switch state.path[id: id] {
@@ -72,19 +67,6 @@ struct NavigationReducer: Reducer {
                         state.home.drink.total = goalState.total
                     default:
                         break
-                    }
-                default:
-                    break
-                }
-            case let .loadAndShowAD(action):
-                switch action {
-                case .toGoalView, .backDrinkView:
-                    return .run { send in
-                        await GADUtil.share.load(.interstitial)
-                        let model = await GADUtil.share.show(.interstitial)
-                        if model == nil {
-                            await send(action)
-                        }
                     }
                 default:
                     break

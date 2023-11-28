@@ -30,9 +30,6 @@ struct AppReducer: Reducer {
         
         case launch(LaunchReducer.Action)
         case home(NavigationReducer.Action)
-        
-        case updateNativeAD(ADBaseModel?)
-        case showNativeAD
     }
     
     var body: some Reducer<State, Action> {
@@ -50,28 +47,14 @@ struct AppReducer: Reducer {
                 case .launch:
                     state.launch.progress = 0.0
                     state.launch.duration = 14.0
-                    return .run { send in
-                        await GADUtil.share.dismiss()
-                    }
-                case .root:
-                    GADUtil.share.disappear(.native)
-                    return .run { send in
-                        let adModel = await GADUtil.share.load(.native)
-                        await send(.updateNativeAD(adModel))
-                        await send(.showNativeAD)
-                    }
+                default:
+                    break
                 }
             case let .launch(action):
                 if action == .launched, state.launch.progress >= 1.0 {
                     return .run { send in
                         await send(.item(.root))
                     }
-                }
-            case let .updateNativeAD(model):
-                state.home.home.drink.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-            case .showNativeAD:
-                return .run { _ in
-                    await GADUtil.share.show(.native)
                 }
             default:break
             }

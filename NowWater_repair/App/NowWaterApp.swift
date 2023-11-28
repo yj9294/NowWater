@@ -8,7 +8,6 @@
 import ComposableArchitecture
 import FBSDKCoreKit
 import SwiftUI
-import GADUtil
 import AppTrackingTransparency
 
 @main
@@ -16,7 +15,6 @@ struct NowWater_repairApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init(){
         NotificationHelper.shared.register()
-        GADUtil.share.requestConfig()
     }
     var body: some Scene {
         WindowGroup {

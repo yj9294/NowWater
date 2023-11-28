@@ -23,12 +23,6 @@ struct ReminderReducer: Reducer {
         @UserDefault(key: "reminder.list")
         var list: [String]?
         
-        var adModel: GADNativeViewModel = .None
-        
-        var isNoAD: Bool {
-            adModel == .None
-        }
-        
         var isAllowImpression: Bool {
             if Date().timeIntervalSince(impresssDate) <= 10 {
                 debugPrint("[ad] reminder native ad 间隔小于10秒 ")
@@ -105,9 +99,6 @@ struct ReminderView: View {
                         }
                     }
                 }.padding(.all, 20)
-                HStack{
-                    NativeView(model: viewStore.adModel)
-                }.frame(height: viewStore.isNoAD ? 0 : 116).padding(.horizontal, 20).padding(.bottom, 100)
             }.navigationTitle("Reminder List").navigationBarRight {
                 Button {
                     viewStore.send(.addButtonTapped)

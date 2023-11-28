@@ -34,13 +34,10 @@
 		C7FFD8F12ADD343600F9F527 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D82ADD343600F9F527 /* DrinkView.swift */; };
 		C7FFD8F22ADD343600F9F527 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D92ADD343600F9F527 /* GoalView.swift */; };
 		C7FFD8F52ADD35A600F9F527 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD8F42ADD35A600F9F527 /* ComposableArchitecture */; };
-		C7FFD9072ADD43FE00F9F527 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */; };
-		C7FFD90A2ADD45D000F9F527 /* GADUtil in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD9092ADD45D000F9F527 /* GADUtil */; };
 		C7FFD90E2ADE1CFD00F9F527 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */; };
 		C7FFD9102ADE1CFD00F9F527 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD90F2ADE1CFD00F9F527 /* FacebookBasics */; };
 		C7FFD9122ADE1CFD00F9F527 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD9112ADE1CFD00F9F527 /* FacebookCore */; };
 		C7FFD9142ADE1E0B00F9F527 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C7FFD9132ADE1E0A00F9F527 /* GADConfig.json */; };
-		C7FFD9162ADE28A000F9F527 /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD9152ADE28A000F9F527 /* GADUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,10 +68,8 @@
 		C7FFD8D62ADD343600F9F527 /* ChartsTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsTopBarView.swift; sourceTree = "<group>"; };
 		C7FFD8D82ADD343600F9F527 /* DrinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 		C7FFD8D92ADD343600F9F527 /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
-		C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
 		C7FFD90B2ADE1C5B00F9F527 /* NowWater-repair-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NowWater-repair-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C7FFD9132ADE1E0A00F9F527 /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
-		C7FFD9152ADE28A000F9F527 /* GADUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +81,6 @@
 				C7FFD9122ADE1CFD00F9F527 /* FacebookCore in Frameworks */,
 				C7FFD9102ADE1CFD00F9F527 /* FacebookBasics in Frameworks */,
 				C7FFD8F52ADD35A600F9F527 /* ComposableArchitecture in Frameworks */,
-				C7FFD90A2ADD45D000F9F527 /* GADUtil in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +156,6 @@
 				C7FFD8CC2ADD343600F9F527 /* Reminder */,
 				C7FFD8D02ADD343600F9F527 /* Charts */,
 				C7FFD8D72ADD343600F9F527 /* Drink */,
-				C7FFD8F82ADD38DE00F9F527 /* GADMobile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,15 +210,6 @@
 			path = Drink;
 			sourceTree = "<group>";
 		};
-		C7FFD8F82ADD38DE00F9F527 /* GADMobile */ = {
-			isa = PBXGroup;
-			children = (
-				C7FFD9152ADE28A000F9F527 /* GADUtil.swift */,
-				C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */,
-			);
-			path = GADMobile;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,7 +228,6 @@
 			name = NowWater_repair;
 			packageProductDependencies = (
 				C7FFD8F42ADD35A600F9F527 /* ComposableArchitecture */,
-				C7FFD9092ADD45D000F9F527 /* GADUtil */,
 				C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */,
 				C7FFD90F2ADE1CFD00F9F527 /* FacebookBasics */,
 				C7FFD9112ADE1CFD00F9F527 /* FacebookCore */,
@@ -279,7 +262,6 @@
 			mainGroup = C7FFD89F2ADD335E00F9F527;
 			packageReferences = (
 				C7FFD8F32ADD35A600F9F527 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */,
 				C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = C7FFD8A92ADD335E00F9F527 /* Products */;
@@ -309,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FFD9072ADD43FE00F9F527 /* GADNativeView.swift in Sources */,
 				C7FFD8DF2ADD343600F9F527 /* KeyboardHelper.swift in Sources */,
 				C7FFD8F12ADD343600F9F527 /* DrinkView.swift in Sources */,
 				C7FFD8DD2ADD343600F9F527 /* CircleView.swift in Sources */,
@@ -333,7 +314,6 @@
 				C7FFD8E12ADD343600F9F527 /* AppView.swift in Sources */,
 				C7FFD8DE2ADD343600F9F527 /* NotificationHelper.swift in Sources */,
 				C7FFD8E92ADD343600F9F527 /* ReminderAlertView.swift in Sources */,
-				C7FFD9162ADE28A000F9F527 /* GADUtil.swift in Sources */,
 				C7FFD8ED2ADD343600F9F527 /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,14 +539,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yj9294/GADUtil";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk/";
@@ -582,11 +554,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7FFD8F32ADD35A600F9F527 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		C7FFD9092ADD45D000F9F527 /* GADUtil */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */;
-			productName = GADUtil;
 		};
 		C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */ = {
 			isa = XCSwiftPackageProductDependency;

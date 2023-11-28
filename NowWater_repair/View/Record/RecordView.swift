@@ -82,6 +82,9 @@ struct RecordReduce: Reducer {
                 var array = (state.recordList ?? [])
                 array.insert(model, at: 0)
                 state.recordList = array
+                return .run { send in
+                    await send(.pop)
+                }
             default:
                 break
             }

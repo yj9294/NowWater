@@ -40,11 +40,6 @@ struct HomeReducer: Reducer {
         case charts(ChartsReducer.Action)
         case reminder(ReminderReducer.Action)
         
-        case loadAD
-        case preLoadAD
-        case cleanNativeAD
-        case updateNativeAD(ADBaseModel?)
-        case showNativeAD
     }
     
     var body: some Reducer<State, Action> {
@@ -55,50 +50,6 @@ struct HomeReducer: Reducer {
                     return .none
                 }
                 state.item = item
-                
-            case .preLoadAD:
-                if isNeedLoadNativeAD(state) {
-                    return .run { send in
-                        await send(.cleanNativeAD)
-                        await send(.loadAD)
-                    }
-                } else {
-                    switch state.item {
-                    case .drink:
-                        state.drink.adModel = .None
-                    case .charts:
-                        state.charts.adModel = .None
-                    case .reminder:
-                        state.reminder.adModel = .None
-                    }
-                }
-            case .cleanNativeAD:
-                GADUtil.share.disappear(.native)
-            case .loadAD:
-                return .run { send in
-                    await GADUtil.share.load(.interstitial)
-                    let model = await GADUtil.share.load(.native)
-                    await send(.updateNativeAD(model))
-                    await send(.showNativeAD)
-                }
-            case .updateNativeAD(let model):
-                switch state.item {
-                case .drink:
-                    state.drink.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-                    state.drink.impresssDate = Date()
-                case .charts:
-                    state.charts.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-                    state.charts.impresssDate = Date()
-                    state.drink.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-                case .reminder:
-                    state.reminder.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-                    state.reminder.impresssDate = Date()
-                    state.drink.adModel = GADNativeViewModel(ad:model as? NativeADModel, view: UINativeAdView())
-                }
-            case .showNativeAD:
-                return .run {_ in
-                    await GADUtil.share.show(.native)
-                }
             default:
                 break
             }
@@ -149,7 +100,7 @@ struct HomeView: View {
                 }
             }.onAppear {
                 viewStore.send(.item(viewStore.item))
-                viewStore.send(.preLoadAD)
+//                viewStore.send(.preLoadAD)
             }
         }
     }
@@ -162,7 +113,7 @@ struct HomeView: View {
                 Button {
                     if viewStore.item != item {
                         viewStore.send(.item(item))
-                        viewStore.send(.preLoadAD)
+//                        viewStore.send(.preLoadAD)
                     }
                 } label: {
                     Image(viewStore.item == item ? "home_\(item.rawValue)_1" : "home_\(item.rawValue)")

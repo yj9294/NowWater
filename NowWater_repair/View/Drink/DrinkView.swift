@@ -12,14 +12,9 @@ struct DrinkReducer: Reducer {
     struct State: Equatable {
         static func == (lhs: DrinkReducer.State, rhs: DrinkReducer.State) -> Bool {
             lhs.totalML == rhs.totalML &&
-            lhs.todayML == rhs.todayML &&
-            lhs.adModel == rhs.adModel
+            lhs.todayML == rhs.todayML
         }
         
-        var adModel: GADNativeViewModel = .None
-        var isNoAD: Bool {
-            adModel == .None
-        }
         var isAllowImpression: Bool {
             if Date().timeIntervalSince(impresssDate) <= 10 {
                 debugPrint("[ad] drink native ad 间隔小于10秒 ")
@@ -74,9 +69,6 @@ struct DrinkView: View {
         WithViewStore(store, observe: {$0}) { viewStore in
             ScrollView {
                 VStack(spacing: 0){
-                    HStack{
-                        NativeView(model: viewStore.adModel)
-                    }.frame(height: viewStore.isNoAD ? 0 : 116).padding(.horizontal, 20).padding(.top, 15)
                     VStack{
                         ZStack{
                             Image("home_content")

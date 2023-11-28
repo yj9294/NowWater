@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GADUtil
 import ComposableArchitecture
 
 struct LaunchReducer: Reducer {
@@ -26,7 +25,7 @@ struct LaunchReducer: Reducer {
             }
         }
         
-        var duration = 14.0
+        var duration = 2.5
     }
     
     enum Action: Equatable {
@@ -35,10 +34,6 @@ struct LaunchReducer: Reducer {
         case startProgress
         case stopProgress
         case update
-        case loadingAD
-        case stopLoadAD
-        case updateDuration
-        case showAD
         case launched
     }
     
@@ -50,22 +45,18 @@ struct LaunchReducer: Reducer {
                     return .none
                 }
                 return .run { send in
-                    await send(.loadingAD)
                     await send(.startProgress)
                 }
             case .onDisAppear:
                 return .run { send in
                     await send(.stopProgress)
-                    await send(.stopLoadAD)
                 }
             case .update:
-//                debugPrint("[ad] 当前加载进度" + "\(state.progress)")
                 state.progress += (0.01 / state.duration)
                 if state.progress >= 1.0 {
                     return .run { send in
                         await send(.stopProgress)
-                        await send(.stopLoadAD)
-                        await send(.showAD)
+                        await send(.launched)
                     }
                 }
                 return .none
@@ -77,30 +68,6 @@ struct LaunchReducer: Reducer {
                         await send(.update)
                     }
                 }.cancellable(id: CancelID.progressView)
-            case .loadingAD:
-                debugPrint("[ad] 当前加载广告")
-                return .run { send in
-                    await GADUtil.share.load(.interstitial)
-                    await GADUtil.share.load(.native)
-                    try await Task.sleep(nanoseconds: 2_000_000_000)
-                    for await _ in self.adClock.timer(interval: .milliseconds(10)) {
-                        if GADUtil.share.isLoaded(.interstitial) {
-                            await send(.updateDuration)
-                        }
-                    }
-                }.cancellable(id: CancelID.loadingAD)
-            case .stopLoadAD:
-                return .cancel(id: CancelID.loadingAD)
-            case .updateDuration:
-                state.duration = 0.05
-                return .none
-            case .showAD:
-                return .run { send in
-                    let model = await GADUtil.share.show(.interstitial)
-                    if model == nil {
-                        await send(.launched)
-                    }
-                }
             case .launched:
                 return .none
             }

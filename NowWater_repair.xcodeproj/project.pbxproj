@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7FFD8B02ADD336000F9F527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FFD8AF2ADD336000F9F527 /* Assets.xcassets */; };
+		C7FFD8B32ADD336000F9F527 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FFD8B22ADD336000F9F527 /* Preview Assets.xcassets */; };
+		C7FFD8DA2ADD343600F9F527 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BA2ADD343600F9F527 /* FileHelper.swift */; };
+		C7FFD8DB2ADD343600F9F527 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BB2ADD343600F9F527 /* NavigationBar.swift */; };
+		C7FFD8DC2ADD343600F9F527 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BC2ADD343600F9F527 /* ColorHelper.swift */; };
+		C7FFD8DD2ADD343600F9F527 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BD2ADD343600F9F527 /* CircleView.swift */; };
+		C7FFD8DE2ADD343600F9F527 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BE2ADD343600F9F527 /* NotificationHelper.swift */; };
+		C7FFD8DF2ADD343600F9F527 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8BF2ADD343600F9F527 /* KeyboardHelper.swift */; };
+		C7FFD8E02ADD343600F9F527 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C02ADD343600F9F527 /* DateHelper.swift */; };
+		C7FFD8E12ADD343600F9F527 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C22ADD343600F9F527 /* AppView.swift */; };
+		C7FFD8E22ADD343600F9F527 /* NowWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C32ADD343600F9F527 /* NowWaterApp.swift */; };
+		C7FFD8E32ADD343600F9F527 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C62ADD343600F9F527 /* HomeView.swift */; };
+		C7FFD8E42ADD343600F9F527 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C72ADD343600F9F527 /* NavigationView.swift */; };
+		C7FFD8E52ADD343600F9F527 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8C82ADD343600F9F527 /* LaunchView.swift */; };
+		C7FFD8E62ADD343600F9F527 /* RecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8CA2ADD343600F9F527 /* RecordListView.swift */; };
+		C7FFD8E72ADD343600F9F527 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8CB2ADD343600F9F527 /* RecordView.swift */; };
+		C7FFD8E82ADD343600F9F527 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8CD2ADD343600F9F527 /* ReminderView.swift */; };
+		C7FFD8E92ADD343600F9F527 /* ReminderAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8CE2ADD343600F9F527 /* ReminderAlertView.swift */; };
+		C7FFD8EA2ADD343600F9F527 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8CF2ADD343600F9F527 /* DatePickerView.swift */; };
+		C7FFD8EB2ADD343600F9F527 /* ChartsContentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D12ADD343600F9F527 /* ChartsContentProgressView.swift */; };
+		C7FFD8EC2ADD343600F9F527 /* ChartMLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D22ADD343600F9F527 /* ChartMLView.swift */; };
+		C7FFD8ED2ADD343600F9F527 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D32ADD343600F9F527 /* ChartsView.swift */; };
+		C7FFD8EF2ADD343600F9F527 /* ChartsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D52ADD343600F9F527 /* ChartsContentView.swift */; };
+		C7FFD8F02ADD343600F9F527 /* ChartsTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D62ADD343600F9F527 /* ChartsTopBarView.swift */; };
+		C7FFD8F12ADD343600F9F527 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D82ADD343600F9F527 /* DrinkView.swift */; };
+		C7FFD8F22ADD343600F9F527 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD8D92ADD343600F9F527 /* GoalView.swift */; };
+		C7FFD8F52ADD35A600F9F527 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD8F42ADD35A600F9F527 /* ComposableArchitecture */; };
+		C7FFD9072ADD43FE00F9F527 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */; };
+		C7FFD90A2ADD45D000F9F527 /* GADUtil in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD9092ADD45D000F9F527 /* GADUtil */; };
+		C7FFD90E2ADE1CFD00F9F527 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */; };
+		C7FFD9102ADE1CFD00F9F527 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD90F2ADE1CFD00F9F527 /* FacebookBasics */; };
+		C7FFD9122ADE1CFD00F9F527 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = C7FFD9112ADE1CFD00F9F527 /* FacebookCore */; };
+		C7FFD9142ADE1E0B00F9F527 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C7FFD9132ADE1E0A00F9F527 /* GADConfig.json */; };
+		C7FFD9162ADE28A000F9F527 /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFD9152ADE28A000F9F527 /* GADUtil.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7FFD8A82ADD335E00F9F527 /* NowWater_repair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NowWater_repair.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FFD8AF2ADD336000F9F527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7FFD8B22ADD336000F9F527 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7FFD8BA2ADD343600F9F527 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		C7FFD8BB2ADD343600F9F527 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		C7FFD8BC2ADD343600F9F527 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		C7FFD8BD2ADD343600F9F527 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C7FFD8BE2ADD343600F9F527 /* NotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		C7FFD8BF2ADD343600F9F527 /* KeyboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		C7FFD8C02ADD343600F9F527 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		C7FFD8C22ADD343600F9F527 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		C7FFD8C32ADD343600F9F527 /* NowWaterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowWaterApp.swift; sourceTree = "<group>"; };
+		C7FFD8C62ADD343600F9F527 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C7FFD8C72ADD343600F9F527 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		C7FFD8C82ADD343600F9F527 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		C7FFD8CA2ADD343600F9F527 /* RecordListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordListView.swift; sourceTree = "<group>"; };
+		C7FFD8CB2ADD343600F9F527 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		C7FFD8CD2ADD343600F9F527 /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		C7FFD8CE2ADD343600F9F527 /* ReminderAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderAlertView.swift; sourceTree = "<group>"; };
+		C7FFD8CF2ADD343600F9F527 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		C7FFD8D12ADD343600F9F527 /* ChartsContentProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsContentProgressView.swift; sourceTree = "<group>"; };
+		C7FFD8D22ADD343600F9F527 /* ChartMLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartMLView.swift; sourceTree = "<group>"; };
+		C7FFD8D32ADD343600F9F527 /* ChartsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		C7FFD8D52ADD343600F9F527 /* ChartsContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsContentView.swift; sourceTree = "<group>"; };
+		C7FFD8D62ADD343600F9F527 /* ChartsTopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsTopBarView.swift; sourceTree = "<group>"; };
+		C7FFD8D82ADD343600F9F527 /* DrinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
+		C7FFD8D92ADD343600F9F527 /* GoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
+		C7FFD90B2ADE1C5B00F9F527 /* NowWater-repair-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NowWater-repair-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C7FFD9132ADE1E0A00F9F527 /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
+		C7FFD9152ADE28A000F9F527 /* GADUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7FFD8A52ADD335E00F9F527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7FFD90E2ADE1CFD00F9F527 /* FacebookAEM in Frameworks */,
+				C7FFD9122ADE1CFD00F9F527 /* FacebookCore in Frameworks */,
+				C7FFD9102ADE1CFD00F9F527 /* FacebookBasics in Frameworks */,
+				C7FFD8F52ADD35A600F9F527 /* ComposableArchitecture in Frameworks */,
+				C7FFD90A2ADD45D000F9F527 /* GADUtil in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7FFD89F2ADD335E00F9F527 = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8AA2ADD335E00F9F527 /* NowWater_repair */,
+				C7FFD8A92ADD335E00F9F527 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7FFD8A92ADD335E00F9F527 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8A82ADD335E00F9F527 /* NowWater_repair.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7FFD8AA2ADD335E00F9F527 /* NowWater_repair */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD90B2ADE1C5B00F9F527 /* NowWater-repair-Info.plist */,
+				C7FFD8C12ADD343600F9F527 /* App */,
+				C7FFD8B92ADD343600F9F527 /* componse */,
+				C7FFD8C42ADD343600F9F527 /* View */,
+				C7FFD8AF2ADD336000F9F527 /* Assets.xcassets */,
+				C7FFD9132ADE1E0A00F9F527 /* GADConfig.json */,
+				C7FFD8B12ADD336000F9F527 /* Preview Content */,
+			);
+			path = NowWater_repair;
+			sourceTree = "<group>";
+		};
+		C7FFD8B12ADD336000F9F527 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8B22ADD336000F9F527 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7FFD8B92ADD343600F9F527 /* componse */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8BA2ADD343600F9F527 /* FileHelper.swift */,
+				C7FFD8BB2ADD343600F9F527 /* NavigationBar.swift */,
+				C7FFD8BC2ADD343600F9F527 /* ColorHelper.swift */,
+				C7FFD8BD2ADD343600F9F527 /* CircleView.swift */,
+				C7FFD8BE2ADD343600F9F527 /* NotificationHelper.swift */,
+				C7FFD8BF2ADD343600F9F527 /* KeyboardHelper.swift */,
+				C7FFD8C02ADD343600F9F527 /* DateHelper.swift */,
+			);
+			path = componse;
+			sourceTree = "<group>";
+		};
+		C7FFD8C12ADD343600F9F527 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8C22ADD343600F9F527 /* AppView.swift */,
+				C7FFD8C32ADD343600F9F527 /* NowWaterApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C7FFD8C42ADD343600F9F527 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8C52ADD343600F9F527 /* Home */,
+				C7FFD8C92ADD343600F9F527 /* Record */,
+				C7FFD8CC2ADD343600F9F527 /* Reminder */,
+				C7FFD8D02ADD343600F9F527 /* Charts */,
+				C7FFD8D72ADD343600F9F527 /* Drink */,
+				C7FFD8F82ADD38DE00F9F527 /* GADMobile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7FFD8C52ADD343600F9F527 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8C62ADD343600F9F527 /* HomeView.swift */,
+				C7FFD8C72ADD343600F9F527 /* NavigationView.swift */,
+				C7FFD8C82ADD343600F9F527 /* LaunchView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C7FFD8C92ADD343600F9F527 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8CA2ADD343600F9F527 /* RecordListView.swift */,
+				C7FFD8CB2ADD343600F9F527 /* RecordView.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		C7FFD8CC2ADD343600F9F527 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8CD2ADD343600F9F527 /* ReminderView.swift */,
+				C7FFD8CE2ADD343600F9F527 /* ReminderAlertView.swift */,
+				C7FFD8CF2ADD343600F9F527 /* DatePickerView.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		C7FFD8D02ADD343600F9F527 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8D12ADD343600F9F527 /* ChartsContentProgressView.swift */,
+				C7FFD8D22ADD343600F9F527 /* ChartMLView.swift */,
+				C7FFD8D32ADD343600F9F527 /* ChartsView.swift */,
+				C7FFD8D52ADD343600F9F527 /* ChartsContentView.swift */,
+				C7FFD8D62ADD343600F9F527 /* ChartsTopBarView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		C7FFD8D72ADD343600F9F527 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD8D82ADD343600F9F527 /* DrinkView.swift */,
+				C7FFD8D92ADD343600F9F527 /* GoalView.swift */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
+		C7FFD8F82ADD38DE00F9F527 /* GADMobile */ = {
+			isa = PBXGroup;
+			children = (
+				C7FFD9152ADE28A000F9F527 /* GADUtil.swift */,
+				C7FFD9062ADD43FE00F9F527 /* GADNativeView.swift */,
+			);
+			path = GADMobile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7FFD8A72ADD335E00F9F527 /* NowWater_repair */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7FFD8B62ADD336000F9F527 /* Build configuration list for PBXNativeTarget "NowWater_repair" */;
+			buildPhases = (
+				C7FFD8A42ADD335E00F9F527 /* Sources */,
+				C7FFD8A52ADD335E00F9F527 /* Frameworks */,
+				C7FFD8A62ADD335E00F9F527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NowWater_repair;
+			packageProductDependencies = (
+				C7FFD8F42ADD35A600F9F527 /* ComposableArchitecture */,
+				C7FFD9092ADD45D000F9F527 /* GADUtil */,
+				C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */,
+				C7FFD90F2ADE1CFD00F9F527 /* FacebookBasics */,
+				C7FFD9112ADE1CFD00F9F527 /* FacebookCore */,
+			);
+			productName = NowWater_repair;
+			productReference = C7FFD8A82ADD335E00F9F527 /* NowWater_repair.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7FFD8A02ADD335E00F9F527 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C7FFD8A72ADD335E00F9F527 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C7FFD8A32ADD335E00F9F527 /* Build configuration list for PBXProject "NowWater_repair" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7FFD89F2ADD335E00F9F527;
+			packageReferences = (
+				C7FFD8F32ADD35A600F9F527 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */,
+				C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
+			productRefGroup = C7FFD8A92ADD335E00F9F527 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7FFD8A72ADD335E00F9F527 /* NowWater_repair */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7FFD8A62ADD335E00F9F527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7FFD8B32ADD336000F9F527 /* Preview Assets.xcassets in Resources */,
+				C7FFD9142ADE1E0B00F9F527 /* GADConfig.json in Resources */,
+				C7FFD8B02ADD336000F9F527 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7FFD8A42ADD335E00F9F527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7FFD9072ADD43FE00F9F527 /* GADNativeView.swift in Sources */,
+				C7FFD8DF2ADD343600F9F527 /* KeyboardHelper.swift in Sources */,
+				C7FFD8F12ADD343600F9F527 /* DrinkView.swift in Sources */,
+				C7FFD8DD2ADD343600F9F527 /* CircleView.swift in Sources */,
+				C7FFD8EB2ADD343600F9F527 /* ChartsContentProgressView.swift in Sources */,
+				C7FFD8E82ADD343600F9F527 /* ReminderView.swift in Sources */,
+				C7FFD8E22ADD343600F9F527 /* NowWaterApp.swift in Sources */,
+				C7FFD8EF2ADD343600F9F527 /* ChartsContentView.swift in Sources */,
+				C7FFD8F22ADD343600F9F527 /* GoalView.swift in Sources */,
+				C7FFD8E52ADD343600F9F527 /* LaunchView.swift in Sources */,
+				C7FFD8E72ADD343600F9F527 /* RecordView.swift in Sources */,
+				C7FFD8DC2ADD343600F9F527 /* ColorHelper.swift in Sources */,
+				C7FFD8EA2ADD343600F9F527 /* DatePickerView.swift in Sources */,
+				C7FFD8F02ADD343600F9F527 /* ChartsTopBarView.swift in Sources */,
+				C7FFD8DA2ADD343600F9F527 /* FileHelper.swift in Sources */,
+				C7FFD8E02ADD343600F9F527 /* DateHelper.swift in Sources */,
+				C7FFD8DB2ADD343600F9F527 /* NavigationBar.swift in Sources */,
+				C7FFD8E42ADD343600F9F527 /* NavigationView.swift in Sources */,
+				C7FFD8EC2ADD343600F9F527 /* ChartMLView.swift in Sources */,
+				C7FFD8E62ADD343600F9F527 /* RecordListView.swift in Sources */,
+				C7FFD8E32ADD343600F9F527 /* HomeView.swift in Sources */,
+				C7FFD8E12ADD343600F9F527 /* AppView.swift in Sources */,
+				C7FFD8DE2ADD343600F9F527 /* NotificationHelper.swift in Sources */,
+				C7FFD8E92ADD343600F9F527 /* ReminderAlertView.swift in Sources */,
+				C7FFD9162ADE28A000F9F527 /* GADUtil.swift in Sources */,
+				C7FFD8ED2ADD343600F9F527 /* ChartsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7FFD8B42ADD336000F9F527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7FFD8B52ADD336000F9F527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7FFD8B72ADD336000F9F527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NowWater_repair/Preview Content\"";
+				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NowWater-repair-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NowWater;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.testbird.NowWater-repair";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C7FFD8B82ADD336000F9F527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NowWater_repair/Preview Content\"";
+				DEVELOPMENT_TEAM = 67D9SM7JC3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NowWater-repair-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NowWater;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.testbird.NowWater-repair";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7FFD8A32ADD335E00F9F527 /* Build configuration list for PBXProject "NowWater_repair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7FFD8B42ADD336000F9F527 /* Debug */,
+				C7FFD8B52ADD336000F9F527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7FFD8B62ADD336000F9F527 /* Build configuration list for PBXNativeTarget "NowWater_repair" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7FFD8B72ADD336000F9F527 /* Debug */,
+				C7FFD8B82ADD336000F9F527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7FFD8F32ADD35A600F9F527 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yj9294/GADUtil";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7FFD8F42ADD35A600F9F527 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FFD8F32ADD35A600F9F527 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		C7FFD9092ADD45D000F9F527 /* GADUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FFD9082ADD45D000F9F527 /* XCRemoteSwiftPackageReference "GADUtil" */;
+			productName = GADUtil;
+		};
+		C7FFD90D2ADE1CFD00F9F527 /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		C7FFD90F2ADE1CFD00F9F527 /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		C7FFD9112ADE1CFD00F9F527 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7FFD90C2ADE1CFD00F9F527 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C7FFD8A02ADD335E00F9F527 /* Project object */;
+}

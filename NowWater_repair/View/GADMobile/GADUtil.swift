@@ -184,7 +184,7 @@ extension GADUtil {
             $0.position == position
         }.first
         switch position {
-        case .interstitial:
+        case .interstitial, .open:
             /// 有廣告
             if let ad = loadAD?.loadedArray.first as? InterstitialADModel, !appenterbackground, !isGADLimited {
                 ad.impressionHandler = { [weak self, loadAD] in
@@ -351,7 +351,7 @@ struct GADLimit: Codable {
 }
 
 public enum ADPosition: String, CaseIterable {
-    case native, interstitial
+    case native, interstitial, open
 }
 
 class ADLoadModel: NSObject {
@@ -444,7 +444,7 @@ extension ADLoadModel {
         var ad: ADBaseModel? = nil
         if position == .native {
             ad = NativeADModel(model: array[preloadIndex])
-        } else if position == .interstitial {
+        } else {
             ad = InterstitialADModel(model: array[preloadIndex])
         }
         ad?.position = position
@@ -539,7 +539,7 @@ extension InterstitialADModel {
         GADInterstitialAd.load(withAdUnitID: model?.theAdID ?? "", request: GADRequest()) { [weak self] ad, error in
             guard let self = self else { return }
             if let error = error {
-                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id")")
+                NSLog("[AD] (\(self.position.rawValue)) load ad FAILED for id \(self.model?.theAdID ?? "invalid id"), err:\(error.localizedDescription)")
                 self.loadedHandler?(false, error.localizedDescription)
                 return
             }
@@ -612,7 +612,7 @@ extension NativeADModel {
 
 extension NativeADModel: GADAdLoaderDelegate {
     public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        NSLog("[AD] (\(position.rawValue)) load ad FAILED for id \(model?.theAdID ?? "invalid id")")
+        NSLog("[AD] (\(position.rawValue)) load ad FAILED for id \(model?.theAdID ?? "invalid id"), err:\(error.localizedDescription)")
         loadedHandler?(false, error.localizedDescription)
     }
 }

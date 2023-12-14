@@ -5,15 +5,15 @@
 	<key>FacebookAdvertiserIDCollectionEnabled</key>
 	<true/>
 	<key>FacebookAppID</key>
-	<string></string>
+	<string>359742996415557</string>
 	<key>FacebookAutoLogAppEventsEnabled</key>
 	<true/>
 	<key>FacebookClientToken</key>
-	<string></string>
+	<string>6fda3625019436af08fd7096c2364b0e</string>
 	<key>FacebookDisplayName</key>
 	<string>NowWater</string>
 	<key>GADApplicationIdentifier</key>
-	<string></string>
+	<string>ca-app-pub-6649303551443392~9323609640</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

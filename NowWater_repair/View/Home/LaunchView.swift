@@ -80,11 +80,11 @@ struct LaunchReducer: Reducer {
             case .loadingAD:
                 debugPrint("[ad] 当前加载广告")
                 return .run { send in
-                    await GADUtil.share.load(.interstitial)
+                    await GADUtil.share.load(.open)
                     await GADUtil.share.load(.native)
                     try await Task.sleep(nanoseconds: 2_000_000_000)
                     for await _ in self.adClock.timer(interval: .milliseconds(10)) {
-                        if GADUtil.share.isLoaded(.interstitial) {
+                        if GADUtil.share.isLoaded(.open) {
                             await send(.updateDuration)
                         }
                     }
@@ -96,7 +96,7 @@ struct LaunchReducer: Reducer {
                 return .none
             case .showAD:
                 return .run { send in
-                    let model = await GADUtil.share.show(.interstitial)
+                    let model = await GADUtil.share.show(.open)
                     if model == nil {
                         await send(.launched)
                     }
